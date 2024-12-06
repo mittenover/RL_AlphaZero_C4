@@ -6,6 +6,25 @@ from colorama import Fore, Style, init
 #The board is represented by a 6x7 numpy array. The value 0 represents an empty cell, 1 a cell occupied by player 1 and 2 a cell occupied by player 2
 
 class Board:
+    """
+    A class used to represent the Connect 4 board
+
+    ...
+
+    Attributes
+    ----------
+
+    Methods
+    -------
+    play_piece(column)
+        Play a piece in the given column if the column is not full
+    check_winner()
+        Check if a player has won the game
+    print_board()
+        Print the current board
+    all_actions()
+        Return a list of all possible actions
+    """
     def __init__(self):
         self.init_board = np.zeros((6,7))
         self.player = 1
